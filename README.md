@@ -1,5 +1,6 @@
 # ctee
 
+[![Github Actions](https://github.com/Lipen/ctee/actions/workflows/ci.yml/badge.svg)](https://github.com/Lipen/ctee/actions)
 [![Crates.io](https://img.shields.io/crates/v/ctee)](https://crates.io/crates/ctee)
 [![Crate Downloads](https://img.shields.io/crates/d/ctee)](https://crates.io/crates/ctee)
 [![MIT License](https://img.shields.io/crates/l/ctee)](https://opensource.org/licenses/MIT)
