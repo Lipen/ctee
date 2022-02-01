@@ -37,23 +37,27 @@ fn main() {
     let stdout = io::stdout();
     let stdout = stdout.lock();
 
-    let mut outputs: Vec<_> = cli.files.iter().map(|fname| {
-        // Open/create the file
-        let f = OpenOptions::new()
-            .write(true)
-            .create(true)
-            .append(cli.append)
-            .open(fname)
-            .unwrap_or_else(|e| {
-                panic!("Unable to open file '{}': {}", fname, e);
-            });
-        // Wrap (if needed) the file with StripAnsiWriter
-        if cli.strip_ansi {
-            Box::new(StripAnsiWriter::new(f)) as Box<dyn Write>
-        } else {
-            Box::new(f) as Box<dyn Write>
-        }
-    }).collect();
+    let mut outputs: Vec<_> = cli
+        .files
+        .iter()
+        .map(|fname| {
+            // Open/create the file
+            let f = OpenOptions::new()
+                .write(true)
+                .create(true)
+                .append(cli.append)
+                .open(fname)
+                .unwrap_or_else(|e| {
+                    panic!("Unable to open file '{}': {}", fname, e);
+                });
+            // Wrap (if needed) the file with StripAnsiWriter
+            if cli.strip_ansi {
+                Box::new(StripAnsiWriter::new(f)) as Box<dyn Write>
+            } else {
+                Box::new(f) as Box<dyn Write>
+            }
+        })
+        .collect();
 
     // Also add STDOUT
     outputs.push(Box::new(stdout));
@@ -66,7 +70,9 @@ fn main() {
         let bytes = stdin.read(&mut buf).expect("Unable to read from stdin");
 
         // Exit when STDIN is closed
-        if bytes == 0 { break; }
+        if bytes == 0 {
+            break;
+        }
 
         // **Very important**, otherwise you can end up with
         // Heartbleed-esque bugs! I'm chosing to shadow `buf` to
