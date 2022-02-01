@@ -44,6 +44,3 @@ OPTIONS:
 EXAMPLES:
     <command-with-colorized-output> | ctee my.log
 ```
-
-## CLI
-
