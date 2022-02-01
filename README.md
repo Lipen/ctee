@@ -1,5 +1,9 @@
 # ctee
 
+[![Crates.io](https://img.shields.io/crates/v/ctee)](https://crates.io/crates/ctee)
+[![Crate Downloads](https://img.shields.io/crates/d/ctee)](https://crates.io/crates/ctee)
+[![MIT License](https://img.shields.io/crates/l/ctee)](https://opensource.org/licenses/MIT)
+
 > Rust implementation of Unix's `tee` with stripping of ANSI colors.
 
 ## Installation
