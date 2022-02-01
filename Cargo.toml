@@ -6,7 +6,6 @@ description = "Unix's tee with stripping of ANSI-colors"
 repository = "https://github.com/Lipen/ctee"
 edition = "2021"
 license = "MIT"
-readme = "README.md"
 categories = ["command-line-utilities"]
 keywords = ["unix", "tee", "ansi"]
 
