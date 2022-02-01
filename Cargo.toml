@@ -1,0 +1,12 @@
+[package]
+name = "ctee"
+version = "0.1.0"
+authors = ["Konstantin Chukharev <lipen00@gmail.com>"]
+description = "Unix's tee with stripping of ANSI-colors"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.0.13", features = ["derive"] }
+strip-ansi-escapes = "0.1.1"
