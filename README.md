@@ -10,11 +10,13 @@
 ## Installation
 
 Use the crate published on [crates.io](https://crates.io/crates/ctee):
+
 ```shell
 cargo install --locked ctee
 ```
 
 OR manually clone and install the latest version:
+
 ```shell
 git clone https://github.com/Lipen/ctee
 cd ctee
