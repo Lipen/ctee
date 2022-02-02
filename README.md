@@ -46,3 +46,7 @@ OPTIONS:
 EXAMPLES:
     <command-with-colorized-output> | ctee my.log
 ```
+
+## Credits
+
+[`@shepmaster`](https://stackoverflow.com/users/155423/shepmaster) for [the code of Rust implementation of `tee`](https://codereview.stackexchange.com/a/144643).
