@@ -11,7 +11,7 @@
 
 Use the crate published on [crates.io](https://crates.io/crates/ctee):
 ```shell
-cargo install ctee
+cargo install --locked ctee
 ```
 
 OR manually clone and install the latest version:
