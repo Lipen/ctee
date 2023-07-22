@@ -46,6 +46,7 @@ fn main() {
                 .write(true)
                 .create(true)
                 .append(cli.append)
+                .truncate(!cli.append)
                 .open(fname)
                 .unwrap_or_else(|e| {
                     panic!("Unable to open file '{}': {}", fname, e);

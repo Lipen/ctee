@@ -1,6 +1,6 @@
 [package]
 name = "ctee"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Konstantin Chukharev <lipen00@gmail.com>"]
 description = "Unix's tee with stripping of ANSI-colors"
 repository = "https://github.com/Lipen/ctee"
